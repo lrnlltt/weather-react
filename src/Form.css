@@ -1,0 +1,38 @@
+#search-form {
+  padding-bottom: 10px;
+}
+
+#search-form #search-bar {
+  border-radius: 20px;
+  border: solid #00587a 1px;
+}
+
+#search-form ::placeholder {
+  color: #00587a;
+}
+
+.search-button {
+  margin-left: 5px;
+  border-radius: 24px;
+  background-color: #00587a;
+  color: #ffffff;
+  border: 0;
+}
+
+.search-button:hover {
+  background-color: gray;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.button {
+  width: 120px;
+  height: 54px;
+}
+
+.current-button {
+  border: solid #00587a 1px;
+  border-radius: 24px;
+  color: #042675;
+  margin-left: 5px;
+}
