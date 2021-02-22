@@ -6,6 +6,27 @@ ul {
 h1 {
   font-size: 75px;
 }
+.weather-container {
+  padding: 15px;
+}
+
+.details-bar {
+  max-width: 185px;
+  min-width: 185px;
+}
+
+.weather {
+  padding: 0;
+}
+
+.weather,
+.weather h3 {
+  color: #008891;
+}
+
+.weather ul {
+  font-size: 18px;
+}
 
 .temp-container {
   display: inline-block;
@@ -41,18 +62,49 @@ h1 {
 #temp-converters a:hover {
   text-decoration: underline;
 }
-.weather-container {
-  padding: 15px;
-}
-.weather,
-.weather h3 {
-  color: #008891;
-}
-
-.weather ul {
-  font-size: 18px;
-}
 
 #description {
   text-transform: capitalize;
+}
+
+
+/* FORM */ 
+
+#search-form {
+  padding-bottom: 10px;
+}
+
+#search-form #search-bar {
+  border-radius: 20px;
+  border: solid #00587a 1px;
+}
+
+#search-form ::placeholder {
+  color: #00587a;
+}
+
+.search-button {
+  margin-left: 5px;
+  border-radius: 24px;
+  background-color: #00587a;
+  color: #ffffff;
+  border: 0;
+}
+
+.search-button:hover {
+  background-color: gray;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.button {
+  width: 120px;
+  height: 54px;
+}
+
+.current-button {
+  border: solid #00587a 1px;
+  border-radius: 24px;
+  color: #042675;
+  margin-left: 5px;
 }

@@ -1,5 +1,4 @@
 import "./styles.css";
-import Form from "./Form";
 import Weather from "./Weather";
 
 export default function App() {
@@ -8,8 +7,7 @@ export default function App() {
       <div className="container">
         <div className="card">
           <div className="card-body">
-            <Form />
-            <Weather />
+            <Weather DefaultCity="Melbourne"/>
           </div>
         </div>
         <footer>
