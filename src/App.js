@@ -12,6 +12,9 @@ export default function App() {
             <Weather />
           </div>
         </div>
+        <footer>
+          This was coded by Lauren Elliott, and is <a href="https://github.com/lrnlltt/weather-react" target="_blank">open-sourced on GitHub</a>.
+        </footer>
       </div>
     </div>
   );
