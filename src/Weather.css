@@ -5,11 +5,20 @@ ul {
 
 h1 {
   font-size: 75px;
+  color: gray;
 }
+
+.formattedDate {
+  font-size: 40px;
+  margin: 20px 20px 20px 0px;
+  color: gray;
+}
+
 .weather-container {
   padding: 15px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .details-bar {
@@ -18,27 +27,30 @@ h1 {
 }
 
 .weather {
-  padding: 0;
+  padding: 40px;
 }
 
-.weather,
-.weather h3 {
-  color: #008891;
-}
-
-.weather ul {
+.weather ul,
+li {
   font-size: 18px;
+  margin: 10px;
+  display: inline-flex;
+}
+
+.temp-details ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%; 
+  color: gray; 
 }
 
 #temp-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
-}
-
-#forecast-temp {
-  color: #ec8c4c;
+  justify-content: center;
 }
 
 #description {
@@ -46,9 +58,10 @@ h1 {
 }
 
 .weather canvas {
-  max-height: 64px;
+  max-height: 74px;
   display: flex;
   align-content: center;
+  margin-right: 10px;
 }
 
 /* FORM */
@@ -58,20 +71,19 @@ h1 {
 }
 
 #search-form #search-bar {
-  border-radius: 20px;
+  border-radius: 18px;
   border: solid #00587a 1px;
-}
-
-#search-form ::placeholder {
-  color: #00587a;
+  padding: 10px 20px 10px 20px;
+  height: 44px;
 }
 
 .search-button {
   margin-left: 5px;
-  border-radius: 24px;
-  background-color: #00587a;
-  color: #ffffff;
+  border-radius: 18px;
   border: 0;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  width: 150px;
 }
 
 .search-button:hover {
@@ -80,14 +92,9 @@ h1 {
   cursor: pointer;
 }
 
-.button {
-  width: 120px;
-  height: 54px;
-}
-
 .current-button {
   border: solid #00587a 1px;
-  border-radius: 24px;
-  color: #042675;
+  border-radius: 18px;
   margin-left: 5px;
+  padding: 10px 20px 10px 20px;
 }

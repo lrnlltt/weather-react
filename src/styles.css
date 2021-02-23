@@ -1,5 +1,8 @@
 .App {
-  font-family: sans-serif;
+font-family: 'Open Sans', sans-serif;;
+  padding: 70px;
+  background: linear-gradient(#dfdfdf, #f5f3da, #b2decb);
+  height: 100vh;
 }
 
 body {
@@ -7,6 +10,7 @@ body {
 }
 
 h2 {
+  font-size: 60px !important;
   color: #008891;
   margin: 0;
 }
@@ -21,23 +25,13 @@ h4 {
   margin: 0;
 }
 
-li {
-  color: #487e95;
-  list-style: none;
-}
-
 span {
   color: #008891;
 }
 
-.container {
-  max-width: 900px;
-}
-
-.card {
-  background: linear-gradient(rgb(229, 226, 226), rgba(201, 201, 201, 40));
-  margin: 30px;
-  padding: 10px;
-  border-radius: 40px;
-  border: none;
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: flex-end;
 }

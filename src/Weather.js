@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Loader from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast"
+import FormattedDate from "./FormattedDate"
 import axios from "axios";
 
 import "./Weather.css";
@@ -54,11 +55,14 @@ export default function Weather(props) {
   if (weatherData.ready) {
   return (
     <div>
+      <div className="formattedDate">
+      <FormattedDate date={weatherData.date}/>
+      </div>
       <form className="input-group" id="search-form" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Enter city name"
-          className="form-control"
+          placeholder="Enter a City"
+          className="form-control search-bar"
           id="search-bar"
           autoComplete="off"
           autoFocus="on"
@@ -67,13 +71,13 @@ export default function Weather(props) {
         <div className="input-group-btn d-gap gap-2 d-md-block" id="buttons">
           <input
             type="submit"
-            className="btn btn-info search-button btn-outline-info "
+            className="btn btn-info search-button btn-outline-info"
             value="Search"
           />
           <input
             type="button"
             className="btn btn-light current-button btn-outline-secondary"
-            value="Current"
+            value="Current Location"
             onClick={currentLocation}
           />
         </div>
