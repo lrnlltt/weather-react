@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Loader from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast"
 import axios from "axios";
 
 import "./Weather.css";
@@ -8,12 +9,23 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready : false }); 
   const [city, setCity] = useState(props.DefaultCity); 
+  let apiKey = "560ccf0a9b6f4d30ed340bdb4dfaf585"
+  let urlApi = " ";
   
   function search() {
-    let apiKey = "560ccf0a9b6f4d30ed340bdb4dfaf585"
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     axios.get(apiUrl).then(handleresponse)
-    
+  }
+
+  function currentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(function(position) {
+    let lat = position.coords.latitude; 
+    let lon = position.coords.longitude;
+    urlApi= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
+    });
+
+    axios.get(urlApi).then(handleresponse); 
   }
 
   function handleChange(event) {
@@ -30,6 +42,7 @@ export default function Weather(props) {
       ready: true,
       city: response.data.name,
       date: new Date(response.data.dt *1000),
+      temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       feelsLike: response.data.main.feels_like,
       humidity: response.data.main.humidity,
@@ -62,10 +75,12 @@ export default function Weather(props) {
             type="button"
             className="btn btn-light current-button btn-outline-secondary"
             value="Current"
+            onClick={currentLocation}
           />
         </div>
       </form>
       <WeatherInfo data={weatherData}/>
+      <WeatherForecast city={weatherData.city}/>
     </div>
   );
   } else {

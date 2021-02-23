@@ -1,0 +1,27 @@
+.weather-temperature {
+  display: flex;
+}
+
+#temp-converters {
+  font-size: 20px;
+  position: relative;
+  padding: 10px;
+}
+
+#temp-converters .active {
+  color: gray;
+  cursor: default;
+}
+
+#temp-converters .active:hover {
+  text-decoration: none;
+}
+
+#temp-converters a {
+  text-decoration: none;
+  color: #ffa828;
+}
+
+#temp-converters a:hover {
+  text-decoration: underline;
+}
