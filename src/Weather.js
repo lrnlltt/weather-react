@@ -22,10 +22,9 @@ export default function Weather(props) {
     navigator.geolocation.getCurrentPosition(function(position) {
     let lat = position.coords.latitude; 
     let lon = position.coords.longitude;
-    urlApi= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
-    });
-
-    axios.get(urlApi).then(handleresponse); 
+    urlApi= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+    axios.get(urlApi).then(handleresponse);
+  }); 
   }
 
   function handleChange(event) {
