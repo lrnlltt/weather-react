@@ -24,11 +24,21 @@ export default function WeatherIcons(props) {
         "50d": "FOG",
         "50n": "FOG"
     }
+    
+    let icon = props.code;
 
+    function colorpicker() {
+        if (icon.endsWith('d') === true) {
+            return "#d2b48c"
+        } else {
+            return "#d2b48c"
+        }
+    }
+    
     return (
         <ReactAnimatedWeather
             icon={codeMapping[props.code]}
-            color="#70af85"
+            color= {colorpicker()}
             size={74}
             animate={true}
         />

@@ -30,8 +30,5 @@ span {
 }
 
 footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  align-content: flex-end;
+  padding: 40px; 
 }

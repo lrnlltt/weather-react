@@ -1,4 +1,6 @@
 import "./styles.css";
+import "./App.css"
+
 import Weather from "./Weather";
 
 export default function App() {
@@ -8,7 +10,12 @@ export default function App() {
             <Weather DefaultCity="Melbourne"/>
       </div>
       <footer>
-          This was coded by Lauren Elliott, and is {" "}<a href="https://github.com/lrnlltt/weather-react" target="_blank">open-sourced on GitHub</a>.
+          <p className="link">
+            This was coded by Lauren Elliott, and is 
+            <a href="https://github.com/lrnlltt/weather-react" target="_blank">
+              {" "}open-sourced on GitHub
+            </a>.
+          </p>
         </footer>
     </div>
   );
