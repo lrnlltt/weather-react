@@ -1,5 +1,5 @@
 .App {
-font-family: 'Open Sans', sans-serif;;
+  font-family: "Open Sans", sans-serif;
   padding: 70px;
   background: linear-gradient(#dfdfdf, #f5f3da, #b2decb);
   height: 100vh;
@@ -30,5 +30,5 @@ span {
 }
 
 footer {
-  padding: 40px; 
+  padding: 20px;
 }
