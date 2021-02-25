@@ -42,8 +42,8 @@ li {
   justify-content: space-evenly;
   flex-wrap: wrap;
   list-style: none;
-  width: 100%; 
-  color: gray; 
+  width: 100%;
+  color: gray;
 }
 
 #temp-container {
@@ -68,6 +68,7 @@ li {
 
 #search-form {
   padding-bottom: 10px;
+  display: flex !important;
 }
 
 #search-form #search-bar {
@@ -75,15 +76,21 @@ li {
   border: solid #00587a 1px;
   padding: 10px 20px 10px 20px;
   height: 44px;
+  flex: 2;
+  min-width: 320px;
 }
 
-.search-button {
+#buttons {
+  display: flex !important;
+  flex: 1;
+}
+
+#buttons .search-button {
   margin-left: 5px;
   border-radius: 18px;
-  border: 0;
   color: white;
   padding: 10px 20px 10px 20px;
-  width: 150px;
+  flex: 1;
 }
 
 .search-button:hover {
@@ -92,9 +99,10 @@ li {
   cursor: pointer;
 }
 
-.current-button {
+#buttons .current-button {
   border: solid #00587a 1px;
   border-radius: 18px;
   margin-left: 5px;
   padding: 10px 20px 10px 20px;
+  flex: 1;
 }
